@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<title>NeuralFlow - AI Workflow Automation</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<style>
+:root {
+  --bg: #121212;
+  --accent: #00bcd4;
+  --card-bg: rgba(255,255,255,0.1);
+  --card-bg-hover: rgba(255,255,255,0.15);
+  --text: #e0e0e0;
+  --gradient: linear-gradient(135deg, #00bcd4 0%, #00695c 100%);
+}
+body {
+  margin:0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.6;
+}
+a {
+  color: var(--accent);
+  text-decoration:none;
+}
+header, section, footer {
+  padding: 60px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+.hero {
+  text-align:center;
+  background: var(--gradient);
+  color:white;
+  padding:120px 20px;
+}
+.hero h1 {
+  font-size:3rem;
+  margin-bottom:0.5rem;
+}
+.hero p {
+  font-size:1.25rem;
+  margin-bottom:1.5rem;
+}
+.cta-buttons a {
+  display:inline-block;
+  margin:0 10px;
+  padding:12px 24px;
+  border-radius:30px;
+  font-weight:600;
+}
+.cta-buttons .primary {
+  background:var(--accent);
+  color:white;
+}
+.cta-buttons .secondary {
+  background:transparent;
+  border:2px solid var(--accent);
+  color:var(--accent);
+}
+.features, .pricing {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.card {
+  background:var(--card-bg);
+  backdrop-filter:blur(10px);
+  border-radius:15px;
+  padding:20px;
+  transition:background 0.3s;
+}
+.card:hover {
+  background:var(--card-bg-hover);
+}
+.card svg {
+  width:48px;
+  height:48px;
+  fill:var(--accent);
+  margin-bottom:15px;
+}
+.card h3 {
+  margin:10px 0;
+}
+.pricing .card {
+  text-align:center;
+}
+.pricing .card h3 {
+  font-size:1.5rem;
+}
+.pricing .card p.price {
+  font-size:2.5rem;
+  margin:20px 0;
+}
+.pricing .card ul {
+  list-style:none;
+  padding:0;
+  margin:20px 0;
+}
+.pricing .card li {
+  margin:10px 0;
+}
+.footer {
+  text-align:center;
+  font-size:0.9rem;
+  color:rgba(255,255,255,0.6);
+}
+.footer a {
+  margin:0 10px;
+}
+</style>
+</head>
+<body>
+<header class='hero'>
+  <h1>NeuralFlow</h1>
+  <p>AI-powered workflow automation that learns from your processes.</p>
+  <div class='cta-buttons'>
+    <a href='#pricing' class='primary'>Get Started</a>
+    <a href='#features' class='secondary'>Learn More</a>
+  </div>
+</header>
+
+<section id='features'>
+  <h2 style='text-align:center;margin-bottom:40px;'>Key Capabilities</h2>
+  <div class='features'>
+    <div class='card'>
+      <svg viewBox='0 0 64 64'><path d='M32 2L42 22H22zM2 32l20 10-10-20zM32 62l10-20H22zM62 32l-20-10 10 20z'/></svg>
+      <h3>Intelligent Automation</h3>
+      <p>Automate repetitive tasks with AI-driven decision making.</p>
+    </div>
+    <div class='card'>
+      <svg viewBox='0 0 64 64'><circle cx='32' cy='32' r='30'/><path d='M32 12v20l12 8'/></svg>
+      <h3>Seamless Integration</h3>
+      <p>Connect with your favorite tools and services effortlessly.</p>
+    </div>
+    <div class='card'>
+      <svg viewBox='0 0 64 64'><path d='M12 12h40v40H12z'/><path d='M32 22v20'/></svg>
+      <h3>Advanced Analytics</h3>
+      <p>Gain insights from your workflows with real-time dashboards.</p>
+    </div>
+  </div>
+</section>
+
+<section id='pricing'>
+  <h2 style='text-align:center;margin-bottom:40px;'>Pricing Plans</h2>
+  <div class='pricing'>
+    <div class='card'>
+      <h3>Free</h3>
+      <p class='price'>$0<span style='font-size:0.5rem;'>/mo</span></p>
+      <ul>
+        <li>Basic automation</li>
+        <li>Community support</li>
+        <li>Up to 5 tasks</li>
+      </ul>
+      <a href='#' class='primary'>Sign Up</a>
+    </div>
+    <div class='card'>
+      <h3>Pro</h3>
+      <p class='price'>$49<span style='font-size:0.5rem;'>/mo</span></p>
+      <ul>
+        <li>All Free features</li>
+        <li>Priority support</li>
+        <li>Unlimited tasks</li>
+      </ul>
+      <a href='#' class='primary'>Buy Now</a>
+    </div>
+    <div class='card'>
+      <h3>Enterprise</h3>
+      <p class='price'>Contact Us</p>
+      <ul>
+        <li>Custom solutions</li>
+        <li>Dedicated account manager</li>
+        <li>Enterprise integrations</li>
+      </ul>
+      <a href='#' class='primary'>Contact</a>
+    </div>
+  </div>
+</section>
+
+<footer class='footer'>
+  <a href='#'>Home</a>
+  <a href='#features'>Features</a>
+  <a href='#pricing'>Pricing</a>
+  <a href='#'>Contact</a>
+  <p style='margin-top:20px;'>© 2026 NeuralFlow. All rights reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(anchor.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
