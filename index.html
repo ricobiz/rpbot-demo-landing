@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuralFlow – AI Workflow Automation</title>
+<style>
+  :root {
+    --bg-dark: #0a0a0a;
+    --accent-cyan: #00e5ff;
+    --accent-teal: #00bfa5;
+    --text-light: #f0f0f0;
+    --card-bg: rgba(255,255,255,0.08);
+    --card-border: rgba(255,255,255,0.15);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg-dark);color:var(--text-light);line-height:1.6;scroll-behavior:smooth;}
+  a{text-decoration:none;color:inherit;}
+  button{font:inherit;border:none;cursor:pointer;}
+  /* Hero */
+  #hero{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;overflow:hidden;background:var(--bg-dark);}
+  #hero::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,229,255,0.1),rgba(0,191,165,0.1));z-index:0;}
+  #hero .content{position:relative;z-index:1;text-align:center;padding:0 1rem;max-width:800px;}
+  #hero h1{font-size:3rem;letter-spacing:-0.02em;margin-bottom:0.5rem;}
+  #hero p{font-size:1.25rem;margin-bottom:1.5rem;}
+  #hero .cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+  #hero .cta-group button{padding:0.75rem 1.5rem;font-size:1rem;border-radius:6px;}
+  #hero .cta-primary{background:var(--accent-cyan);color:#000;}
+  #hero .cta-secondary{background:transparent;border:2px solid var(--accent-cyan);color:var(--accent-cyan);}
+  /* Features */
+  #features{padding:4rem 1rem;background:var(--bg-dark);display:flex;flex-direction:column;align-items:center;gap:2rem;}
+  #features h2{font-size:2rem;margin-bottom:1rem;}
+  .feature-card{background:var(--card-bg);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:12px;padding:2rem;max-width:300px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .feature-card svg{width:48px;height:48px;margin-bottom:1rem;fill:var(--accent-cyan);}
+  .feature-card h3{font-size:1.25rem;margin-bottom:0.5rem;}
+  .feature-card p{font-size:0.95rem;}
+  /* Pricing */
+  #pricing{padding:4rem 1rem;background:var(--bg-dark);display:flex;flex-direction:column;align-items:center;gap:2rem;}
+  #pricing h2{font-size:2rem;margin-bottom:1rem;}
+  .pricing-grid{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;}
+  .pricing-card{background:var(--card-bg);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:12px;padding:2rem;max-width:280px;display:flex;flex-direction:column;align-items:center;}
+  .pricing-card h3{font-size:1.5rem;margin-bottom:0.5rem;}
+  .pricing-card .price{font-size:2.5rem;margin-bottom:1rem;}
+  .pricing-card ul{list-style:none;margin-bottom:1.5rem;}
+  .pricing-card ul li{margin-bottom:0.5rem;}
+  .pricing-card button{padding:0.75rem 1.5rem;font-size:1rem;border-radius:6px;background:var(--accent-cyan);color:#000;}
+  /* Footer */
+  footer{background:var(--bg-dark);color:var(--text-light);padding:2rem 1rem;text-align:center;font-size:0.9rem;}
+  footer a{color:var(--accent-cyan);}
+</style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="content">
+      <h1>NeuralFlow</h1>
+      <p>AI‑powered workflow automation that turns complex processes into simple, repeatable actions.</p>
+      <div class="cta-group">
+        <button class="cta-primary" aria-label="Get Started">Get Started</button>
+        <button class="cta-secondary" aria-label="Learn More">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="feature-card">
+      <svg aria-hidden="true" viewBox="0 0 64 64"><title>Automation Icon</title><path d="M32 4L12 20v24l20 16 20-16V20z"/></svg>
+      <h3>Automation</h3>
+      <p>Automate repetitive tasks with AI‑driven logic.</p>
+    </div>
+    <div class="feature-card">
+      <svg aria-hidden="true" viewBox="0 0 64 64"><title>Analytics Icon</title><path d="M12 48h40v-4H12zm0-12h40v-4H12zm0-12h40v-4H12z"/></svg>
+      <h3>Analytics</h3>
+      <p>Gain insights with real‑time dashboards.</p>
+    </div>
+    <div class="feature-card">
+      <svg aria-hidden="true" viewBox="0 0 64 64"><title>Security Icon</title><path d="M32 4a28 28 0 1 0 0 56 28 28 0 0 0 0-56zm0 48a20 20 0 1 1 0-40 20 20 0 0 1 0 40z"/></svg>
+      <h3>Security</h3>
+      <p>Secure workflows with enterprise‑grade encryption.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <div class="price">$0<span>/mo</span></div>
+        <ul>
+          <li>Basic automation</li>
+          <li>Community support</li>
+          <li>Up to 5 workflows</li>
+        </ul>
+        <button aria-label="Select Free plan">Select</button>
+      </div>
+      <div class="pricing-card">
+        <h3>Pro</h3>
+        <div class="price">$49<span>/mo</span></div>
+        <ul>
+          <li>All Free features</li>
+          <li>Advanced analytics</li>
+          <li>Unlimited workflows</li>
+        </ul>
+        <button aria-label="Select Pro plan">Select</button>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">$199<span>/mo</span></div>
+        <ul>
+          <li>All Pro features</li>
+          <li>Dedicated support</li>
+          <li>Custom integrations</li>
+        </ul>
+        <button aria-label="Select Enterprise plan">Select</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 NeuralFlow. All rights reserved.</p>
+    <p><a href="#hero">Back to top</a></p>
+  </footer>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({behavior: 'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
