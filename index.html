@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NeuralFlow - AI Workflow Automation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+  --bg-gradient: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  --accent-cyan: #00e5ff;
+  --accent-teal: #00b8ff;
+  --card-bg: rgba(255,255,255,0.1);
+  --card-bg-hover: rgba(255,255,255,0.15);
+  --text-light: #f0f0f0;
+  --text-muted: #a0a0a0;
+}
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-light);
+  background: var(--bg-gradient);
+  line-height:1.6;
+}
+a {color: var(--accent-cyan); text-decoration:none;}
+a:hover {text-decoration:underline;}
+header, section, footer {padding: 4rem 2rem;}
+.hero {text-align:center; padding-top:6rem;}
+.hero h1 {font-size:3rem; margin-bottom:0.5rem; font-weight:700;}
+.hero p {font-size:1.25rem; margin-bottom:2rem; color:var(--text-muted);}
+.btn {padding:0.75rem 1.5rem; border:none; border-radius:4px; font-size:1rem; cursor:pointer;}
+.btn-primary {background:var(--accent-cyan); color:#000; font-weight:600;}
+.btn-secondary {background:transparent; border:2px solid var(--accent-cyan); color:var(--accent-cyan); font-weight:600;}
+.btn-primary:hover {background:#00c7e7;}
+.btn-secondary:hover {background:var(--accent-cyan); color:#000;}
+.card {background:var(--card-bg); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-radius:12px; padding:2rem; text-align:center; transition:background 0.3s;}
+.card:hover {background:var(--card-bg-hover);}
+.card svg {width:64px;height:64px;fill:var(--accent-cyan);margin-bottom:1rem;}
+.features, .pricing {display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;}
+.features .card, .pricing .card {flex:1 1 280px;}
+footer {text-align:center; font-size:0.9rem; color:var(--text-muted);}
+@media (max-width:768px){
+  .hero h1{font-size:2.5rem;}
+  .hero p{font-size:1rem;}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>NeuralFlow</h1>
+  <p>AI-powered workflow automation that turns ideas into action.</p>
+  <a href="#features" class="btn btn-primary">Get Started</a>
+  <a href="#pricing" class="btn btn-secondary">Learn More</a>
+</header>
+<section id="features" class="features">
+  <div class="card">
+    <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg>
+    <h3>Intelligent Automation</h3>
+    <p>Let AI orchestrate repetitive tasks with precision.</p>
+  </div>
+  <div class="card">
+    <svg viewBox="0 0 64 64"><rect x="12" y="12" width="40" height="40"/></svg>
+    <h3>Seamless Integration</h3>
+    <p>Connect with your favorite tools effortlessly.</p>
+  </div>
+  <div class="card">
+    <svg viewBox="0 0 64 64"><polygon points="32,4 60,60 4,60"/></svg>
+    <h3>Real-time Insights</h3>
+    <p>Monitor workflows and optimize performance instantly.</p>
+  </div>
+</section>
+<section id="pricing" class="pricing">
+  <div class="card">
+    <h3>Free</h3>
+    <p>$0 / month</p>
+    <ul style="list-style:none;padding:0;margin:1rem 0;">
+      <li>Basic Features</li>
+      <li>Community Support</li>
+    </ul>
+    <a href="#" class="btn btn-primary">Sign Up</a>
+  </div>
+  <div class="card">
+    <h3>Pro</h3>
+    <p>$49 / month</p>
+    <ul style="list-style:none;padding:0;margin:1rem 0;">
+      <li>All Free Features</li>
+      <li>Advanced Automation</li>
+      <li>Priority Support</li>
+    </ul>
+    <a href="#" class="btn btn-primary">Start Trial</a>
+  </div>
+  <div class="card">
+    <h3>Enterprise</h3>
+    <p>Custom Pricing</p>
+    <ul style="list-style:none;padding:0;margin:1rem 0;">
+      <li>Dedicated Account Manager</li>
+      <li>Enterprise‑grade Security</li>
+      <li>Unlimited Workflows</li>
+    </ul>
+    <a href="#" class="btn btn-primary">Contact Sales</a>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2026 NeuralFlow. All rights reserved.</p>
+</footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
